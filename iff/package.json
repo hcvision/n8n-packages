@@ -1,0 +1,67 @@
+{
+	"version": "0.1.0",
+	"license": "MIT",
+	"author": {
+		"name": "hc:VISION",
+		"email": "entwicklung@hc-vision.de"
+	},
+	"files": [
+		"dist"
+	],
+	"n8n": {
+		"n8nNodesApiVersion": 1,
+		"strict": true,
+		"credentials": [
+			"dist/src/shared/credentials/IffApiUrls.credentials.js",
+			"dist/src/shared/credentials/IffMitarbeiterIam.credentials.js",
+			"dist/src/shared/credentials/IffMitarbeiterIamPkce.credentials.js"
+		],
+		"nodes": [
+			"dist/src/nodes/IffSelfservice/IffSelfserviceTrigger.node.js"
+		]
+	},
+	"scripts": {
+		"build": "n8n-node build",
+		"build:watch": "tsc --watch",
+		"dev": "n8n-node dev",
+		"lint": "n8n-node lint",
+		"lint:fix": "n8n-node lint --fix",
+		"test": "vitest run",
+		"prerelease": "n8n-node prerelease",
+		"release": "n8n-node release",
+		"prepublishOnly": "npm test && n8n-node prerelease"
+	},
+	"devDependencies": {
+		"@n8n/node-cli": "0.57.4",
+		"eslint": "10.15.0",
+		"prettier": "3.6.2",
+		"release-it": "^19.0.4",
+		"typescript": "5.9.2",
+		"vitest": "^3.2.4"
+	},
+	"peerDependencies": {
+		"n8n-workflow": "*"
+	},
+	"engines": {
+		"node": ">=20.15"
+	},
+	"name": "@hcvision/n8n-nodes-iff",
+	"description": "n8n community nodes for HCV IFF services",
+	"homepage": "https://github.com/hcvision/n8n-packages#readme",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/hcvision/n8n-packages",
+		"directory": "iff"
+	},
+	"release-it": {
+		"git": {
+			"tagName": "iff-v${version}",
+			"commitMessage": "chore(iff): release ${version}"
+		}
+	},
+	"keywords": [
+		"n8n-community-node-package",
+		"n8n",
+		"iff"
+	]
+}

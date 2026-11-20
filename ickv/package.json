@@ -1,0 +1,69 @@
+{
+	"version": "0.1.0",
+	"license": "MIT",
+	"author": {
+		"name": "hc:VISION",
+		"email": "entwicklung@hc-vision.de"
+	},
+	"files": [
+		"dist"
+	],
+	"n8n": {
+		"n8nNodesApiVersion": 1,
+		"strict": true,
+		"credentials": [
+			"dist/src/shared/credentials/IckvApiUrls.credentials.js",
+			"dist/src/shared/credentials/IckvMitarbeiterIam.credentials.js",
+			"dist/src/shared/credentials/IckvMitarbeiterIamPkce.credentials.js"
+		],
+		"nodes": [
+			"dist/src/nodes/IckvKontaktcenter/IckvKontaktcenter.node.js",
+			"dist/src/nodes/IckvPostfach/IckvPostfach.node.js",
+			"dist/src/nodes/IckvTickets/IckvTickets.node.js"
+		]
+	},
+	"scripts": {
+		"build": "n8n-node build",
+		"build:watch": "tsc --watch",
+		"dev": "n8n-node dev",
+		"lint": "n8n-node lint",
+		"lint:fix": "n8n-node lint --fix",
+		"test": "vitest run",
+		"prerelease": "n8n-node prerelease",
+		"release": "n8n-node release",
+		"prepublishOnly": "npm test && n8n-node prerelease"
+	},
+	"devDependencies": {
+		"@n8n/node-cli": "0.57.4",
+		"eslint": "10.15.0",
+		"prettier": "3.6.2",
+		"release-it": "^19.0.4",
+		"typescript": "5.9.2",
+		"vitest": "^3.2.4"
+	},
+	"peerDependencies": {
+		"n8n-workflow": "*"
+	},
+	"engines": {
+		"node": ">=20.15"
+	},
+	"name": "@hcvision/n8n-nodes-ickv",
+	"description": "n8n nodes for HCV ICKV services",
+	"homepage": "https://github.com/hcvision/n8n-packages#readme",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/hcvision/n8n-packages",
+		"directory": "ickv"
+	},
+	"release-it": {
+		"git": {
+			"tagName": "ickv-v${version}",
+			"commitMessage": "chore(ickv): release ${version}"
+		}
+	},
+	"keywords": [
+		"n8n-community-node-package",
+		"n8n",
+		"ickv"
+	]
+}
