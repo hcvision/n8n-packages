@@ -58,6 +58,9 @@
 			"commitMessage": "chore(iff): release ${version}"
 		}
 	},
+	"publishConfig": {
+		"access": "public"
+	},
 	"keywords": [
 		"n8n-community-node-package",
 		"n8n",
