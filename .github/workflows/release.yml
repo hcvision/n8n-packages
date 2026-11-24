@@ -31,6 +31,8 @@
 
 name: Release
 
+run-name: Release ${{ inputs.package }} (${{ inputs.version || inputs.bump }})
+
 on:
   workflow_dispatch:
     inputs:
