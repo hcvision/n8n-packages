@@ -30,7 +30,7 @@ You need an IFF installation and a client with the webhook scopes (`hcv:common:w
 
 ## Compatibility
 
-Built against hc:VISION IFF 2.16.0. Use a matching IFF installation.
+Built against hc:VISION IFF 2.17.0. Use a matching IFF installation.
 
 ## Resources
 
