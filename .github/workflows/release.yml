@@ -141,6 +141,13 @@ jobs:
           npm run lint
           npm run build
 
+      - name: Pack tarball for the GitHub release
+        # Runs before staging so that a failure leaves no staged version behind.
+        working-directory: ${{ inputs.package }}
+        run: |
+          mkdir -p "$RUNNER_TEMP/assets"
+          npm pack --pack-destination "$RUNNER_TEMP/assets"
+
       - name: Stage package on npm
         # The package becomes public only after a maintainer approves it on npm.
         # RELEASE_MODE satisfies the n8n-node prepublish guard.
@@ -148,10 +155,6 @@ jobs:
         env:
           RELEASE_MODE: 'true'
         run: npm stage publish
-
-      - name: Pack tarball for the GitHub release
-        working-directory: ${{ inputs.package }}
-        run: npm pack --pack-destination "$RUNNER_TEMP/assets"
 
       - name: Tag and create draft GitHub release
         env:
