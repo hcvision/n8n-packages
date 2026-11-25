@@ -1,9 +1,34 @@
 {
+	"name": "@hcvision/n8n-nodes-iff",
 	"version": "0.0.0",
+	"description": "n8n community nodes for HCV IFF services",
 	"license": "MIT",
+	"keywords": [
+		"n8n-community-node-package",
+		"n8n",
+		"hcvision",
+		"hc:vision",
+		"hcv",
+		"iff"
+	],
+	"homepage": "https://github.com/hcvision/n8n-packages#readme",
 	"author": {
 		"name": "hc:VISION",
-		"email": "entwicklung@hc-vision.de"
+		"email": "info@hc-vision.de"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/hcvision/n8n-packages",
+		"directory": "iff"
+	},
+	"release-it": {
+		"git": {
+			"tagName": "iff-v${version}",
+			"commitMessage": "chore(iff): release ${version}"
+		}
+	},
+	"publishConfig": {
+		"access": "public"
 	},
 	"files": [
 		"dist"
@@ -43,27 +68,5 @@
 	},
 	"engines": {
 		"node": ">=20.15"
-	},
-	"name": "@hcvision/n8n-nodes-iff",
-	"description": "n8n community nodes for HCV IFF services",
-	"homepage": "https://github.com/hcvision/n8n-packages#readme",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/hcvision/n8n-packages",
-		"directory": "iff"
-	},
-	"release-it": {
-		"git": {
-			"tagName": "iff-v${version}",
-			"commitMessage": "chore(iff): release ${version}"
-		}
-	},
-	"publishConfig": {
-		"access": "public"
-	},
-	"keywords": [
-		"n8n-community-node-package",
-		"n8n",
-		"iff"
-	]
+	}
 }
