@@ -6,7 +6,7 @@
 
 | Package | Directory | Description |
 | --- | --- | --- |
-| [@hcvision/n8n-nodes-ickv](https://www.npmjs.com/package/@hcvision/n8n-nodes-ickv) | [`ickv`](./ickv) | n8n nodes for HCV ICKV services |
+| [@hcvision/n8n-nodes-ickv](https://www.npmjs.com/package/@hcvision/n8n-nodes-ickv) | [`ickv`](./ickv) | n8n community nodes for HCV ICKV services |
 | [@hcvision/n8n-nodes-iff](https://www.npmjs.com/package/@hcvision/n8n-nodes-iff) | [`iff`](./iff) | n8n community nodes for HCV IFF services |
 
 Each package has its own README with operations, credentials and compatibility information.
